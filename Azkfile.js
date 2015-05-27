@@ -109,6 +109,7 @@ systems({
     ports: {
       http: "9200",
     },
+    wait: {"retry": 20, "timeout": 1000},
     export_envs : {
       ELASTICSEARCH_URL: "#{system.name}.#{azk.default_domain}:#{net.port[9200]}",
     },
